@@ -1,4 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
+
+
+
+
 	const punkts = [
 		{
 			id: 1,
@@ -47,6 +51,7 @@ document.addEventListener("DOMContentLoaded", () => {
 	let isActive = 0;
 
 	const 	img = document.querySelector(".img"),
+			audio  = document.getElementById('background-music'),
 			answerBlock = document.querySelector(".answer"),
 			answerInput = document.querySelector(".answer__input"),
 			countAllMain = document.querySelector(".count__all--main"),
@@ -56,7 +61,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			text = document.querySelector(".text");
 
 	countAllMain.textContent = punkts.length;
-
+	
 
 	const fillingFunction = (item) => {
 		img.src = item.img;
@@ -68,9 +73,13 @@ document.addEventListener("DOMContentLoaded", () => {
 		if (punkts.length <= isActive+1) {
 			answerBlock.style.display = "none"
 		}
+		if ( isActive > 0 ) {
+			audio.src = "./music/" + isActive + ".mp3";
+			audio.play();
+		}
 
 	};
-
+	audio.volume = 0.4;
 	fillingFunction(punkts[isActive]);
 
 	answerInput.addEventListener("input", (e) => {
