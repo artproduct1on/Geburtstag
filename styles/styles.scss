@@ -3,3 +3,25 @@
 body {
 	background-color: rgb(255, 255, 255);
 };
+
+
+@page {
+    size: landscape;
+};
+@media print {
+    body {
+        writing-mode: tb-rl; 
+    }
+};
+@media screen and (orientation: portrait) {
+    body {
+        transform: rotate(90deg);
+    }
+}
+
+/* Для альбомної орієнтації (горизонтально) */
+@media screen and (orientation: landscape) {
+    body {
+        transform: rotate(0deg);
+    }
+}
