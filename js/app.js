@@ -13,31 +13,31 @@ document.addEventListener("DOMContentLoaded", () => {
 		{
 			id: 2,
 			text: "Ja, das bist wirklich du. Dann fangen wir an: Es gibt ein kleines Zimmer, Darin ein Becken und eine Bürste. Wasser kann man dort ablassen, Kannst du erraten, was das ist? Dann find es. Es gibt einen Code.",
-			img: "./img/2.png",
+			img: "./img/2.gif",
 			answer: "Wasser",
 		},
 		{
 			id: 3,
 			text: "Du bist gut gemacht! Aber es ist noch zu früh, um sich zu freuen. Es liegt ein langer Weg vor uns: Hat einen Griff und einen Schnabel, bringt Wasser zum Kochen ohne Probleme. Aus ihm gießt du deinen Tee, was ist das? Versuch es zu erraten!",
-			img: "./img/3.jpg",
+			img: "./img/3.gif",
 			answer: "Strom",
 		},
 		{
 			id: 4,
 			text: "Wow, wir sind einen Schritt näher gekommen: Er bringt das Universum ins Haus, leuchtet hell im Raum und macht Krach. Bilder ändern sich darin schnell, die Fernbedienung ist sein Helfer. Was ist das?",
-			img: "./img/4.jpg",
+			img: "./img/4.gif",
 			answer: "Fernbedienung",
 		},
 		{
 			id: 5,
 			text: "Es ist sehr schwierig, aber wir haben bereits die Hälfte geschafft: Er hat Türen, die zur Seite aufgehen, und darin sind Kleidung und Schuhe ordentlich verstaut – was ist das?",
-			img: "./img/5.jpg",
+			img: "./img/5.gif",
 			answer: "Kleidung",
 		},
 		{
 			id: 6,
 			text: "Letzter Schritt, man kann es einen Hof nennen, ist es aber nicht!",
-			img: "./img/6.jpg",
+			img: "./img/6.gif",
 			answer: "Geschenk",
 		},
 		{
