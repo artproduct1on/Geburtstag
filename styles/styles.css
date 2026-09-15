@@ -168,7 +168,7 @@ template {
 }
 
 html {
-  font-family: cursive, sans-serif;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
   font-optical-sizing: auto;
   font-weight: 700;
   font-style: normal;
@@ -177,7 +177,7 @@ html {
 
 body {
   background-color: rgb(255, 255, 255);
-  animation: startAnim 1s linear;
+  animation: startAnim 3s linear;
 }
 
 @keyframes startAnim {

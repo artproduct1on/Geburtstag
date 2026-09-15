@@ -1,67 +1,64 @@
 document.addEventListener("DOMContentLoaded", () => {
 
-
-
-
 	const punkts = [
 		{
 			id: 1,
-			text: "Aloha, ich habe gehört, dass du mir helfen könntest, einen Weg zu meiner Ohana (Familie) zu finden. Aber ich möchte sicher sein, dass du Sasha bist. Sag mir dein Lieblingsessen!",
-			img: "./img/start.jpg",
-			answer: "wassermelone",
+			text: "Ві-і-і-і-і-і-таю на квесті: Саша у пошуках дефіциту калорій! Щоб підтвердити, що ти є Булочка, введи її улюблену ягоду!",
+			img: "./img/1.jfif",
+			answer: "Wassermelone",
 		},
 		{
 			id: 2,
-			text: "Ja, das bist wirklich du. Dann fangen wir an: Es gibt ein kleines Zimmer, Darin ein Becken und eine Bürste. Wasser kann man dort ablassen, Kannst du erraten, was das ist? Dann find es. Es gibt einen Code.",
-			img: "./img/2.gif",
-			answer: "Wasser",
+			text: "Дуже добре, це ти. Що ж, час рухати тілом! Нехай партнер по квесту візьме тебе за ноги, так ти маєш пересуватися по квартирі. Підказку знайдеш десь на шляху до своєї кімнати. *(Не просто так ти маєш пересуватися руками!)*",
+			img: "./img/2.jfif",
+			answer: "Kinder",
 		},
 		{
 			id: 3,
-			text: "Du bist gut gemacht! Aber es ist noch zu früh, um sich zu freuen. Es liegt ein langer Weg vor uns: Hat einen Griff und einen Schnabel, bringt Wasser zum Kochen ohne Probleme. Aus ihm gießt du deinen Tee, was ist das? Versuch es zu erraten!",
-			img: "./img/3.gif",
-			answer: "Strom",
+			text: "Боремося із шоколадом в усьому світі! Джуліан дозволяє сьогодні! Наступне запитання: На що ти з міньйоном дивишся?",
+			img: "./img/3.jfif",
+			answer: "Wurstchen",
 		},
 		{
 			id: 4,
-			text: "Wow, wir sind einen Schritt näher gekommen: Er bringt das Universum ins Haus, leuchtet hell im Raum und macht Krach. Bilder ändern sich darin schnell, die Fernbedienung ist sein Helfer. Was ist das?",
-			img: "./img/4.gif",
-			answer: "Fernbedienung",
+			text: "А-а-а, ось ти яка?! На ковбаси дивишся. Все з тобою зрозуміло. Напевно після такого ще й душик полюбляєш?",
+			img: "./img/4.jfif",
+			answer: "Mambo",
 		},
 		{
 			id: 5,
-			text: "Es ist sehr schwierig, aber wir haben bereits die Hälfte geschafft: Er hat Türen, die zur Seite aufgehen, und darin sind Kleidung und Schuhe ordentlich verstaut – was ist das?",
-			img: "./img/5.gif",
-			answer: "Kleidung",
+			text: "Бешкетниця! А ну, розкажи історію Лева Алекса з другої частини та скористайся методом дедукції!",
+			img: "./img/5.jfif",
+			answer: "marshmallow",
 		},
 		{
 			id: 6,
-			text: "Letzter Schritt, man kann es einen Hof nennen, ist es aber nicht!",
-			img: "./img/6.gif",
-			answer: "Geschenk",
+			text: "Ми вже майже на фініші... *Можливостей твоїх штанів. Потрібно подихати свіжим повітрям!",
+			img: "./img/6.jfif",
+			answer: "milka",
 		},
 		{
 			id: 7,
-			text: "Hurra, du hast mich gefunden. Vielen Dank. Jetzt lasst uns deinen Geburtstag feiern!",
-			img: "./img/end.jpg",
+			text: "Що ж, ти перемогла та виграла головний приз: моє кохання. У суботу 19.09.2026 збирайся на побачення!",
+			img: "./img/7.jpg",
 			answer: "",
 		},
-	]
+	];
 
 	let isActive = 0;
 
-	const 	img = document.querySelector(".img"),
-			audio  = document.getElementById('background-music'),
-			answerBlock = document.querySelector(".answer"),
-			answerInput = document.querySelector(".answer__input"),
-			countAllMain = document.querySelector(".count__all--main"),
-			countEnteredMain = document.querySelector(".count__entered--main"),
-			countAllAnswer = document.querySelector(".count__all--answer"),
-			countEnteredAnswer = document.querySelector(".count__entered--answer"),
-			text = document.querySelector(".text");
+	const img = document.querySelector(".img"),
+		audio = document.getElementById('background-music'),
+		answerBlock = document.querySelector(".answer"),
+		answerInput = document.querySelector(".answer__input"),
+		countAllMain = document.querySelector(".count__all--main"),
+		countEnteredMain = document.querySelector(".count__entered--main"),
+		countAllAnswer = document.querySelector(".count__all--answer"),
+		countEnteredAnswer = document.querySelector(".count__entered--answer"),
+		text = document.querySelector(".text");
 
 	countAllMain.textContent = punkts.length;
-	
+
 
 	const fillingFunction = (item) => {
 		img.src = item.img;
@@ -70,10 +67,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		countEnteredMain.textContent = isActive + 1;
 		answerInput.value = "";
 		text.textContent = item.text;
-		if (punkts.length <= isActive+1) {
+		if (punkts.length <= isActive + 1) {
 			answerBlock.style.display = "none"
 		}
-		if ( isActive > 0 ) {
+		if (isActive > 0) {
 			audio.src = "./music/" + isActive + ".mp3";
 			audio.play();
 		}
@@ -86,7 +83,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		const value = e.target.value;
 		countEnteredAnswer.textContent = value.length;
 		if (value.toLowerCase() === punkts[isActive].answer.toLowerCase()) {
-			isActive ++;
+			isActive++;
 			fillingFunction(punkts[isActive])
 		}
 	})
